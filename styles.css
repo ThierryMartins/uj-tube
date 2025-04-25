@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: rgb(29, 29, 29);
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: rgb(48, 48, 48);
+  padding: 1em;
+  flex-wrap: wrap;
+}
+
+.logo-ujtube {
+  width: 8em;
+}
+
+.barra-pesquisa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  overflow: hidden;
+  flex-grow: 1;
+  max-width: 50em;
+  margin-left: 60px;
+  margin-right: 20px;
+}
+
+.barra-pesquisa input[type="search"] {
+  border: none;
+  padding: 10px 15px;
+  flex-grow: 1;
+  font-size: 16px;
+  outline: none;
+  background-color: rgb(77, 77, 77);
+  color: white;
+}
+
+.barra-pesquisa input::placeholder {
+  color: rgba(255, 255, 255, 0.801);
+}
+
+.barra-pesquisa .button-pesquiar {
+  background-color: rgb(77, 77, 77);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.barra-pesquisa .button-pesquiar img {
+  width: 20px;
+  height: 20px;
+}
+
+.container {
+  padding: 2em;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+
+.left-page {
+  flex: 2;
+  min-width: 300px;
+}
+
+.right-page {
+  flex: 1;
+  min-width: 280px;
+}
+
+.video {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 1em;
+}
+
+.h3-video {
+  margin-top: 0.5em;
+  font-weight: normal;
+}
+
+.informacoes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5em;
+  margin: 1.5em 0;
+}
+
+.informacoes img {
+  border-radius: 50%;
+}
+
+.nome-canal #um {
+  font-weight: bold;
+}
+
+.nome-canal #dois {
+  font-family: monospace;
+  font-size: small;
+  color: rgba(255, 255, 255, 0.582);
+}
+
+.interacao {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  margin-left: auto;
+}
+
+.interacao > div {
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+  background-color: rgb(77, 77, 77);
+  padding: 0.5em 1em;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.interacao > div:hover {
+  background-color: rgb(100, 100, 100);
+}
+
+.interacao img {
+  width: 20px;
+  height: 20px;
+  border-radius: 0;
+}
+
+.interacao .ujtube-2{
+  width: 50px;
+  border-radius: 0%;
+}
+
+
+.descricao {
+  border-radius: 20px;
+  padding: 1em;
+  box-shadow: rgba(143, 143, 143, 0.5) 0px 0px 10px;
+}
+
+.descricao span {
+  font-family: monospace;
+  font-size: small;
+  color: rgba(255, 255, 255, 0.582);
+}
+
+.descricao p {
+  margin-top: 0.5em;
+  line-height: 1.5em;
+}
+
+.right-page h2 {
+  font-size: 1.2em;
+  margin-left: 2em;
+  margin-bottom: 1em;
+}
+
+.video-recomendado {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-bottom: 1em;
+  gap: 1em;
+  padding: 0 2em;
+}
+
+.video-recomendado img {
+  width: 168px;
+  height: 94px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.video-recomendado h3 {
+  font-size: 0.9em;
+  line-height: 1.3em;
+}
+
+@media screen and (max-width: 480px) {
+  .informacoes {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .interação {
+    justify-content: flex-start;
+    gap: 0.5em;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 1em;
+  }
+
+  .interação > div {
+    padding: 0.4em 0.8em;
+    font-size: 0.85em;
+  }
+
+  .nome-canal {
+    margin-top: 0.5em;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .main-content {
+    flex-direction: column;
+  }
+
+  .barra-pesquisa {
+    margin: 1em 0 0;
+    width: 100%;
+  }
+
+  .video-recomendado {
+    flex-direction: column;
+    padding: 0 1em;
+  }
+
+  .video-recomendado img {
+    width: 100%;
+    height: auto;
+  }
+
+  .right-page h2 {
+    margin-left: 1em;
+  }
+}
